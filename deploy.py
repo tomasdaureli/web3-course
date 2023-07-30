@@ -42,9 +42,23 @@ abi = compiled_sol["contracts"]["SimpleStorage.sol"]["SimpleStorage"]["abi"]
 
 # Connecting to ganache
 
-w3 = Web3(Web3.HTTPProvider("HTTP://127.0.0.1:7545"))
-chain_id = 1337
-my_address = "0xA9e0A818761dFDBE817DcA88534e3DE91361354E"
+# Ganache
+# w3 = Web3(Web3.HTTPProvider("HTTP://127.0.0.1:7545"))
+
+# Sepolia
+w3 = Web3(Web3.HTTPProvider("https://sepolia.infura.io/v3/a8452e72d1b743ec9e63de6800dfed34"))
+
+# Ganache
+# chain_id = 1337
+
+# Sepolia
+chain_id = 11155111
+
+# Ganache
+# my_address = "0xA9e0A818761dFDBE817DcA88534e3DE91361354E"
+
+my_address = "0xA0F56D8e3ad539208263763D253Ec9c25de1f4e2"
+
 private_key = os.getenv("PRIVATE_KEY")
 # print(private_key)
 # print(os.getenv("SOME_OTHER_VAR"))
